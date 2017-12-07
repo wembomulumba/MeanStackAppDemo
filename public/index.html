@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mean Stack app | Contact US Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  
+      
+    </head>
+  <body>
+    
+      <div class="container" ng-controller="AppCtrl">
+       <h1>HContact List APP Using Node.js</h1>
+       <table class="table">
+        <thead>
+           <tr>
+            
+             <th>Name</th>
+             <th>Email</th>
+             <th>Number</th>   
+            
+            </tr>      
+        </thead> 
+        <tbody>         
+         <tr ng-repeat="contact in contactlist">
+             <td>{{contact.name}}</td>
+             <td>{{contact.email}}</td>
+             <td>{{contact.number}}</td>        
+         </tr>            
+       </tbody>   
+       </table>
+    
+        
+      
+      </div>
+      
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js" ></script>
+   
+      <script src="controller/controller.js"></script> 
+     
+     
+  </body>
+</html>

@@ -18,13 +18,14 @@ app.get('/contactlist', function (req, res) {
   });
 });
 
+// POST FORM CONTACT
 app.post('/contactlist', function (req, res) {
   console.log(req.body);
   db.contactlist.insert(req.body, function(err, doc) {
     res.json(doc);
   });
 });
-
+// DELETE A CONTACT
 app.delete('/contactlist/:id', function (req, res) {
   var id = req.params.id;
   console.log(id);
@@ -33,6 +34,7 @@ app.delete('/contactlist/:id', function (req, res) {
   });
 });
 
+// GET CONTACT BY ID
 app.get('/contactlist/:id', function (req, res) {
   var id = req.params.id;
   console.log(id);
@@ -53,6 +55,7 @@ app.put('/contactlist/:id', function (req, res) {
   );
 });
 
+// START THE SERVER ON PORT 3000
 app.listen(3000);
 console.log("Server running on port 3000");
 console.log('Serve is running on localhost port 3000');

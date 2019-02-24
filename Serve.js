@@ -1,4 +1,5 @@
 // MEAN Stack RESTful API Tutorial - Contact List App
+//author : wembo mulumba 
 
 var express = require('express');
 var app = express();
@@ -42,7 +43,7 @@ app.get('/contactlist/:id', function (req, res) {
     res.json(doc);
   });
 });
-
+// updating the contaclist by id
 app.put('/contactlist/:id', function (req, res) {
   var id = req.params.id;
   console.log(req.body.name);
@@ -56,6 +57,6 @@ app.put('/contactlist/:id', function (req, res) {
 });
 
 // START THE SERVER ON PORT 3000
-app.listen(3000);
-console.log("Server running on port 3000");
-console.log('Serve is running on localhost port 3000');
+app.listen(4001);
+console.log("Server running on port 4001");
+

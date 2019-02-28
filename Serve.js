@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
-
+// http get json list of contacts
 app.get('/contactlist', function (req, res) {
   console.log('I received a GET request');
 

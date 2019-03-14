@@ -1,8 +1,9 @@
+// Controller
 var myApp = angular.module('myApp', []);
 myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
     console.log("Hello World from controller");
 
-
+// function to get contact list
 var refresh = function() {
   $http.get('/contactlist').success(function(response) {
     console.log("I got the data I requested");
@@ -21,24 +22,25 @@ $scope.addContact = function() {
   });
 };
 
+// removing a contact
 $scope.remove = function(id) {
   console.log(id);
   $http.delete('/contactlist/' + id).success(function(response) {
     refresh();
   });
 };
-
+//editing a contact
 $scope.edit = function(id) {
   console.log(id);
   $http.get('/contactlist/' + id).success(function(response) {
     $scope.contact = response;
   });
 };  
-
+// update a contact
 $scope.update = function() {
   console.log($scope.contact._id);
   $http.put('/contactlist/' + $scope.contact._id, $scope.contact).success(function(response) {
-    refresh();
+    refresh(); // refresh the page
   })
 };
 

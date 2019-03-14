@@ -11,9 +11,7 @@ var refresh = function() {
     $scope.contact = "";
   });
 };
-
 refresh();
-
 $scope.addContact = function() {
   console.log($scope.contact);
   $http.post('/contactlist', $scope.contact).success(function(response) {
@@ -21,7 +19,6 @@ $scope.addContact = function() {
     refresh();
   });
 };
-
 // removing a contact
 $scope.remove = function(id) {
   console.log(id);
@@ -43,9 +40,7 @@ $scope.update = function() {
     refresh(); // refresh the page
   })
 };
-
 $scope.deselect = function() {
   $scope.contact = "";
 }
-
 }]);

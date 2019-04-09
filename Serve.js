@@ -7,6 +7,7 @@ var mongojs = require('mongojs');
 var db = mongojs('contactlist', ['contactlist']);
 var bodyParser = require('body-parser');
 
+// public folder
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 // http get json list of contacts

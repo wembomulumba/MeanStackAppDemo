@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 app.get('/contactlist', function (req, res) {
   console.log('I received a GET request');
 
+  // find contact list
   db.contactlist.find(function (err, docs) {
     console.log(docs);
     res.json(docs);
